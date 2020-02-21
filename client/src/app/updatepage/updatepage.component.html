@@ -1,0 +1,55 @@
+
+<div class="container-fluid">
+    <div class="row">
+         <div class="col-sm-6"  >
+                 <div class="addpro-form">  <br>
+                        <!-- = "ngForm" (ngSubmit)="onDeleteProject(pro)"  -->
+                         <form  #pro = "ngForm" (ngSubmit)="onUpdateProject(pro)">
+                                 <h2 class="text-center">Update Project</h2>   
+                                 <br>
+                                  
+                                 <div class="form-group">  
+                                 <input [(ngModel)] = "Title" name="Title" type="text" class="form-control" placeholder="Title" required="required" value="{{Title}}" >
+                                 </div>
+                                                  
+                                 <div class="form-group">
+                                 <select [(ngModel)] = "Category" name="Category" class="form-control"  placeholder="Category" value="{{Category}}">
+                                         
+                                         <option value="Web"> Web Application</option>
+                                         <option value="android">Android Application</option>
+                                         <option value="compiler">Compiler Design</option>
+                                         <option value="image">Image Processing</option>
+                                 </select>
+                                 </div>
+                                                   
+                                 <div class="form-group">  
+                                 <textarea [(ngModel)] = "Team_member" name="Team_member" class="form-control" rows="1" cols="18" placeholder="Add Team Members" value="{{Team_member}}"></textarea>
+                                 </div>
+                                 <div class="form-group">  
+                                 <textarea [(ngModel)] = "Description" name="Description" class="form-control" rows="1" cols="18" placeholder="Description" value="{{Description}}"></textarea>
+                                 </div>      
+                                 <div class="form-group">  
+                                 <textarea [(ngModel)] = "Tech_used" name="Tech_used" class="form-control" rows="1" cols="18" placeholder="Technology Used" value="{{Tech_used}}"></textarea>
+                                 </div>
+                                 <div class="str">  
+                                  Start Date:
+                                 <input [(ngModel)] = "Start_date" name="Start_date"  class="se"type="date" placeholder="start date" value="{{Start_date}}">
+                                 End Date:
+                                 <input [(ngModel)] = "End_date" name="End_date"   class="se" type="date" placeholder="start date" value="{{End_date}}">
+                                 </div>
+                                  <br>
+                                 <div class="form-group">
+                                 <button type="submit" class="btn btn-primary btn-block" (click)="onUpdate(pro)" >Update</button>
+                                 </div>
+                                 <div class="form-group">
+                                 <button type="submit" class="btn1 btn btn-primary btn-block" routerLink="/projectdetails">Back</button>
+                                 </div>
+                         </form>
+                 </div>
+         </div>
+         <div class="col-sm-6" >
+                 <img src="assets/gif.gif">
+         </div>
+ </div>
+ </div>
+ 

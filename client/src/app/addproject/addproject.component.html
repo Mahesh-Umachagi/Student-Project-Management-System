@@ -1,0 +1,49 @@
+<div class="container-fluid">
+   <div class="row">
+        <div class="col-sm-6"  >
+                <div class="addpro-form">
+                        <form action="" method="POST" #proj = "ngForm" (ngSubmit)="onAddProject(proj)">
+                                <h2 class="text-center">Add Project</h2>       
+                                <div class="form-group">  
+                                <input ngModel name="Title" type="text" class="form-control" placeholder="Title" required="required">
+                                </div>
+                                                 
+                                <div class="form-group">
+                                <select ngModel name="Category" class="form-control"  placeholder="Category">
+                                        <option value="Web Application"> Web Application</option>
+                                        <option value="Android Application">Android Application</option>
+                                        <option value="Compiler Design">Compiler Design</option>
+                                        <option value="Image Processing">Image Processing</option>
+                                </select>
+                                </div>
+                                                  
+                                <div class="form-group">  
+                                <textarea ngModel name="Team_member" class="form-control" rows="1" cols="18" placeholder="Add Team Members"></textarea>
+                                </div>
+                                <div class="form-group">  
+                                <textarea ngModel name="Description" class="form-control" rows="1" cols="18" placeholder="Description"></textarea>
+                                </div>      
+                                <div class="form-group">  
+                                <textarea ngModel name="Tech_used" class="form-control" rows="1" cols="18" placeholder="Technology Used"></textarea>
+                                </div>
+                                <div class="str">  
+                                 Start Date:
+                                <input ngModel name="Start_date"  class="se"type="date" placeholder="start date">
+                                End Date:
+                                <input ngModel name="End_date"   class="se" type="date" placeholder="start date">
+                                </div>
+                                 <br>
+                                <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block" >submit</button>
+                                </div>
+                                <div class="form-group">
+                                <button type="submit" class="btn1 btn btn-primary btn-block" routerLink="/projectdetails">Back</button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+        <div class="col-sm-6" >
+                <img src="assets/gif.gif">
+        </div>
+</div>
+</div>

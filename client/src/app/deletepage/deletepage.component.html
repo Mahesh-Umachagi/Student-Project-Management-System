@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+         <div class="col-sm-6"  >
+                 <div class="addpro-form">  <br>
+                         <form  #pro = "ngForm" (ngSubmit)="onDeleteProject(pro)">
+                                 <h2 class="text-center">Delete Project</h2>   
+                                 <br>
+                                 <div class="form-group">  
+                                 <input [(ngModel)] = "Title" name="Title" type="text" class="form-control" placeholder="Title" required="required" value="{{Title}}" >
+                                 </div>
+                                  <br>
+                                 <div class="form-group">
+                                 <button type="submit" class="btn btn-primary btn-block" (click)="onDelete(pro)" >Delete</button>
+                                 </div>
+                                 <div class="form-group">
+                                 <button type="submit" class="btn1 btn btn-primary btn-block" routerLink="/projectdetails">Back</button>
+                                 </div>
+                         </form>
+                 </div>
+         </div>
+         <div class="col-sm-6" >
+                 <img src="assets/gif.gif">
+         </div>
+ </div>
+ </div>
+ 

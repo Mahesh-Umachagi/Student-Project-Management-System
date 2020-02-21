@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10" >
+                <div class="bg">
+                <div class= "text-center"><h1>Project Details</h1>
+                </div>
+                <button type="submit" class="btn2 btn" routerLink="/">Logout</button> 
+                
+                <div class="btnn" >
+                <button class="btn btn-success" routerLink="/addproject">Add Project</button> 
+               
+            </div> 
+                
+                <table class="table table-bordered table-hover" >
+                  <thead>
+                    <tr>
+                        
+                      <th>Title</th>
+                      <th>Category</th>
+                      <th>Team</th>
+                      <th>Description </th>
+                      <th>Technology Used</th>
+                      <th>Strat Date</th>
+                      <th>End Date</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let p of proje" let i =index; async [attr.id]="p.id" >
+                      <!-- (click)="onClick(p.Title)" -->
+                      
+                        
+                      <td>{{p.Title}}</td>
+                      <td>{{p.Category}}</td>
+                      <td>{{p.Team_member}}</td>
+                      <td>{{p.Description}}</td>
+                      <td>{{p.Tech_used}}</td>
+                      <td>{{p.Start_date}}</td>
+                      <td>{{p.End_date}}</td>
+                      <td>
+                        <button class="btn btn-primary" routerLink="[/updatepage,Title]"(click)="onClick(p.Title)">Update</button><br>
+                        
+                          <button class="btn btn-danger"  (click)="onDel(p.Title)" >Delete</button></td>
+                        </tr>
+                      
+                   
+                   
+                  </tbody>
+                </table>
+              
+            </div>
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+<br>
+
+

@@ -1,0 +1,53 @@
+<div class="container-fluid" style="font-family: 'Aleo';">
+    <div class="row">
+        <div class="col-sm-2"></div>
+            <div class="col-sm-4" >
+                        <form action="" method="post" #stud = "ngForm" (ngSubmit)="onAddStu(stud)"
+                         style=" border: 5px;background-color: #f7f7f7;box-shadow: 0px 5px 5px  black;
+                         margin-top:40px;padding:20px;width:max-width;">
+                                <h2 class="text-center">Register</h2>
+                            <div class="form-group" >
+                              <label for=""></label>
+                              <input ngModel minlength="3" pattern="[0-9]*" maxlength="5" #student_ID = "ngModel" id="student_ID"  name="student_ID"  
+                              type="text" class="form-control" placeholder=" student ID" required style="border-radius: 20px;" >
+                              <div class="alert alert-danger" *ngIf="student_ID.touched && student_ID.errors">
+                              <div *ngIf = "student_ID.errors.required">Student Id is required</div>
+                              <div *ngIf = "student_ID.errors.minlength">minimum length should be 3 characters</div>
+                              <div *ngIf = "student_ID.errors.pattern">student Id contains only numbers</div>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for=""></label>
+                                    <input ngModel  minlength="3" pattern="[A-Za-z]*" maxlength="10" #student_name = "ngModel" id="student_name" name="student_name"
+                                     type="text" class="form-control" placeholder="student Name" required  style="border-radius: 20px;" >
+                                     <div class="alert alert-danger" *ngIf="student_name.touched && student_name.errors">
+                                        <div *ngIf = "student_name.errors.required">Student Name is required</div>
+                                        <div *ngIf = "student_name.errors.minlength">minimum length should be 3 characters</div>
+                                        <div *ngIf = "student_name.errors.pattern">student name contains only alphabets</div>
+                                      </div>
+                            </div>
+                            <div class="form-group" >
+                                    <label for=""></label>
+                                    <input ngModel id="college" name="college" type="text" class="form-control" placeholder=" college name" required="required" style="border-radius: 20px;" >
+                                  </div>
+                                  <div class="form-group">
+                                          <label for=""></label>
+                                          <input  ngModel id="password" name="password"  type="password" class="form-control" placeholder=" Password" required="required" style="border-radius: 20px;" >
+                                  </div>
+                                  <div class="form-group" >
+                                        <label for=""></label>
+                                        <input ngModel id="retypepassword" name="retypepassword" type="password" class="form-control" placeholder=" retype password" required="required"style="border-radius: 20px;" >
+                                      </div>
+                                     
+                            <button class="btn btn-primary" style="margin:auto;display:block;font-size: 20px;background-color: rgba(0, 119, 255, 0.918);margin-top:30px;">Register</button>
+                        </form>
+                        <p class="text-center" style="padding-top: 20px;"><a href="#" >Click to login</a></p>
+                    </div>
+                    
+                   
+                    <div class="col-sm-6" style=" border: 5px ; ">
+                        <img style="width: 100%;height: fit-content;" src="assets/gif.gif">
+                    </div>
+                </div>
+            </div>
+    
